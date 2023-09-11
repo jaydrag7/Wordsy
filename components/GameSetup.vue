@@ -21,7 +21,7 @@
         </v-row>
 
     </v-row>
-    <v-container>
+    <v-container v-if="gameObj">
         <v-row class="mt-10 " style="justify-content: center;" >
         <v-col 
         class="mr-5" cols="1" 
@@ -91,7 +91,7 @@
             Complete        
         </v-btn>
         
-        <ConfettiExplosion v-if="visible" :particleCount="200" :duration="5000" :stageHeight="5000"/>
+        <ConfettiExplosion v-if="visible" :particleCount="100" :duration="5000" :stageHeight="5000"/>
     </v-row>
 
     </v-container>
@@ -187,7 +187,7 @@
             // console.log(index)
             event.preventDefault();
             if (index > 0) {
-                // console.log(lettersFound.value.pop())
+                lettersFound.value.pop()
 
                 inputs.value[index] = ''; // Clear the input of the previous field
                 if(index-2 === -1){
@@ -198,7 +198,7 @@
                 }
             }
             if(index === 0){
-                // console.log(lettersFound.value.pop())
+                lettersFound.value.pop()
                 inputs.value[0] = ''
 
             }

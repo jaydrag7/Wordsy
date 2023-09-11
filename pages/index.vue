@@ -139,8 +139,8 @@
     }
   }
 
-  function createGame(){
-    game.createGame(gameForm.value)
+  async function createGame(){
+    await game.createGame(gameForm.value)
     window.location.reload()
 
   }
